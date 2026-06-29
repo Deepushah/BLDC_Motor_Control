@@ -2,6 +2,8 @@
 
 UART-commanded dual DC/BLDC motor controller running on the NUCLEO-G431RB development board. Direction and speed of two independent motors are controlled by sending single ASCII characters over a serial link.
 
+> **Reference paper:** [BLDSC Motor Paper.pdf](BLDSC%20Motor%20Paper.pdf) — the design and theory of operation document accompanying this firmware. See the [Reference Paper](#reference-paper) section below for details.
+
 ## Hardware
 
 | Item | Value |
@@ -112,6 +114,14 @@ BLDC_MOTOR_CONTROL/
 ├── .project                    # STM32CubeIDE Eclipse project file
 └── .cproject                   # CDT managed build configuration
 ```
+
+## Reference Paper
+
+**[BLDSC Motor Paper.pdf](BLDSC%20Motor%20Paper.pdf)**
+
+This PDF is the technical reference document for the project. It covers the theoretical background and design decisions behind the BLDC motor control system implemented in this firmware — including motor operating principles, driver circuit design, PWM-based speed control strategy, and UART command interface design.
+
+Refer to it alongside the source code to understand the rationale behind peripheral configuration choices (PWM frequency, H-bridge GPIO mapping, baud rate selection, etc.).
 
 ## License
 
